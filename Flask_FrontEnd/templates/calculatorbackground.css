@@ -13,7 +13,7 @@ table {
   padding-right: 10px;
 }
 
-input {
+button {
   outline: 0;
   position: relative;
   left: 5px;
@@ -31,7 +31,7 @@ input {
   margin-bottom: 15px;
 }
 
-input:hover {
+button:hover {
   border: 0 solid #000;
   color: #495069;
   background-color: #fff;
@@ -44,7 +44,7 @@ input:hover {
   box-shadow: 0 4px #b0d2cf;
 }
 
-input:active {
+button:active {
   top: 4px;
   border: 0 solid #000;
   color: #495069;

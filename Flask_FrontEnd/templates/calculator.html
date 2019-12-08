@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html>
- <head>
+ <<head>
   <title>Drawing Calculator</title>
   <link href="calculatorbackground.css" rel="stylesheet" type="text/css" />
  </head>
-   <body>
-      <form name=”calculator”>
-         <table>
-            
-            <tr>
-              <td>
-                 <input type="text" name="display" id="display" disabled>
-              </td>
-           </tr>
-           <tr>
-               <td><input type="button" id="clear" name="clear" value="c" onclick="calculator.display.value = ''"></td>
-               <td><input type=”button” class=”operator” name=”plus” value=”+” onclick=”calculator.display.value += ‘+’”></td>
-               
-           </tr>
-           <tr>
-             <td><input type=”button” class=”operator” name=”minus” value=”-” onclick=”calculator.display.value += ‘-’”></td>
-              <td><input type=”button” class=”operator” name=”multiply” value=”*” onclick=”calculator.display.value += ‘*’”></td>
-           </tr>
-           <tr>
-               <td><input type=”button” class=”operator” name=”divide” value=”/” onclick=”calculator.display.value += ‘/’”></td>
-                <td><input type=”button” class=”operator” name=”equals” value=”=” onclick=”calculator.display.value += ‘=’”></td>
-           </tr>
-        </table>
-      </form>
-   </body>
+    <body>
+        <form name="calculator">
+          <table>
+                <tr>
+                    <th><input type="text" name="answer" /></th>
+                    <th><input type="button" id="clear" value=" c " onclick="calculator.answer.value = ' ' " /></th>
+                </tr>
+                <th align="left">
+                    <tr>
+                        <th align="left"><input type="button" id="+" value=" + " onclick="calculator.answer.value += '+'" /></th>
+                    </tr>  
+                    <tr>
+                        <th align="left"><input type="button" id="-" value=" - " onclick="calculator.answer.value += '-'" /></th>
+                    </tr>  
+                    <tr>
+                        <th align="left"><input type="button" id="*" value=" x " onclick="calculator.answer.value += '*'" /></th>
+                    </tr>  
+                    <tr>
+                        <th align="left"><input type="button" id="/" value=" / " onclick="calculator.answer.value += '/'" /></th>
+                    </tr>  
+                    <tr>
+                        <th align="left"><input type="button" id="=" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" /></th>
+                    </tr>       
+                </div>
+            </table>
+            </form>
+      </body>
 </html>
