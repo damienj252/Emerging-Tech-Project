@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Drawing Calculator</title>
+  <link href="calculatorbackground.css" rel="stylesheet" type="text/css" />
+ </head>
+   <body>
+      <form name=”calculator”>
+         <table>
+            
+            <tr>
+              <td>
+                 <input type="text" name="display" id="display" disabled>
+              </td>
+           </tr>
+           <tr>
+               <td><input type="button" id="clear" name="clear" value="c" onclick="calculator.display.value = ''"></td>
+               <td><input type=”button” class=”operator” name=”plus” value=”+” onclick=”calculator.display.value += ‘+’”></td>
+               
+           </tr>
+           <tr>
+             <td><input type=”button” class=”operator” name=”minus” value=”-” onclick=”calculator.display.value += ‘-’”></td>
+              <td><input type=”button” class=”operator” name=”multiply” value=”*” onclick=”calculator.display.value += ‘*’”></td>
+           </tr>
+           <tr>
+               <td><input type=”button” class=”operator” name=”divide” value=”/” onclick=”calculator.display.value += ‘/’”></td>
+                <td><input type=”button” class=”operator” name=”equals” value=”=” onclick=”calculator.display.value += ‘=’”></td>
+           </tr>
+        </table>
+      </form>
+   </body>
+</html>
