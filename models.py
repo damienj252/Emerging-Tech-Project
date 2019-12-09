@@ -39,10 +39,8 @@ from keras.models import load_model
 # We have to reshape the MNIST dataset with Keras, we will convert it from a 3d
 # Array to a 4d NumPy array
 # Making sure train_imgs and test_imgs are floats, so we can use decimal points
-train_imgs = train_imgs.reshape(train_imgs.shape[0], constants.img_width,
-                                constants.img_height, 1)
-test_imgs = test_imgs.reshape(test_imgs.shape[0], constants.img_width,
-                              constants.img_height, 1)
+train_imgs = train_imgs.reshape(train_imgs.shape[0], constants.img_width, constants.img_height, 1)
+test_imgs = test_imgs.reshape(test_imgs.shape[0], constants.img_width, constants.img_height, 1)
 input_shape = (constants.img_width, constants.img_height, 1)
 train_imgs = train_imgs.astype('float32')
 test_imgs = train_imgs.astype('float32')
@@ -70,5 +68,4 @@ model.add(Flatten())
 model.add(Dense(128, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(constants.no_of_numbers, activation='softmax'))
-model.compile(loss=kr.losses.categorical_crossentropy,
-              optimizer=kr.optimizers.Adadelta(), metrics=['accuracy'])
+model.compile(loss=kr.losses.categorical_crossentropy, optimizer=kr.optimizers.Adadelta(), metrics=['accuracy'])

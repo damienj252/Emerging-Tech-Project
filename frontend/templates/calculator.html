@@ -1,32 +1,51 @@
+<!--Adapted From: https://jsfiddle.net/ndubuisi/fbhckjwe/-->
+<!-- Canvas Adapted From https://stackoverflow.com/questions/22891827/how-do-i-hand-draw-on-canvas-with-javascript-->
+
 <!DOCTYPE html>
 <html>
- <<head>
+ <head>
   <title>Drawing Calculator</title>
   <link href="calculatorbackground.css" rel="stylesheet" type="text/css" />
- </head>
+   <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.4.0/fabric.min.js'></script>
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <style type='text/css'>
+     #sheet {
+            border:1px solid white;
+        }
+    </style>
+    <script type='text/javascript'>
+                        window.onload=function(){
+                        var canvas = new fabric.Canvas('sheet');
+                        canvas.isDrawingMode = true;
+                        canvas.freeDrawingBrush.width = 15;
+                        canvas.freeDrawingBrush.color = "#ff0000";}
+    </script>     
+</head>
     <body>
         <form name="calculator">
           <table>
                 <tr>
-                    <th><input type="text" name="answer" /></th>
+                    <th><input type="text" name="answer"/></th>
                     <th><input type="button" id="clear" value=" c " onclick="calculator.answer.value = ' ' " /></th>
                 </tr>
-                <th align="left">
-                    <tr>
-                        <th align="left"><input type="button" id="+" value=" + " onclick="calculator.answer.value += '+'" /></th>
-                    </tr>  
-                    <tr>
-                        <th align="left"><input type="button" id="-" value=" - " onclick="calculator.answer.value += '-'" /></th>
-                    </tr>  
-                    <tr>
-                        <th align="left"><input type="button" id="*" value=" x " onclick="calculator.answer.value += '*'" /></th>
-                    </tr>  
-                    <tr>
-                        <th align="left"><input type="button" id="/" value=" / " onclick="calculator.answer.value += '/'" /></th>
-                    </tr>  
-                    <tr>
-                        <th align="left"><input type="button" id="=" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" /></th>
-                    </tr>       
+                <tr align="down">
+                    <th><canvas id="sheet" width="150" height="150"></canvas></th>
+            
+                        <th align="right"><input type="button" id="+" value=" + " onclick="calculator.answer.value += '+'" />
+                    
+                        <th align="right"><input type="button" id="-" value=" - " onclick="calculator.answer.value += '-'" />
+                    
+                        <th align="right"><input type="button" id="*" value=" x " onclick="calculator.answer.value += '*'" />
+                    
+                        <th align="right"><input type="button" id="/" value=" / " onclick="calculator.answer.value += '/'" />
+                    
+                        <th align="right"><input type="button" id="=" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" />
+                <th>
+                    
+                    <td align="right">
+                     
+                    </td>
+                </th>
            </table>
         </form>
       </body>
