@@ -1,29 +1,17 @@
-# NumPy is a library for the Python programming language,
-# used to adding and  supporting large, multi-dimensional arrays and matrices
+
 import numpy as np
 
-# Matplot lib is a two-dimensional plotting library for Python
 import matplotlib.pyplot as plt
 
-# Keras is a hign level open-source nerual-network library in Python which runs on top of TensorFlow
 import keras as kr
 
-# The MNIST database is a large database of handwritten digits that is used for training of image processing systems.
-# This imports The MNIST dirctly in from the from the keras API
+
 from keras.datasets import mnist
 from keras.models import Sequential
 
-# Imports the constants
+
 import constants
 
-# Importing keras dense which implemnets the operation,
-# Flatten is an operation preformed in tensorflow that reshapes the tensor to have a
-# shape that is equal to the number of elements contained in it.
-# Conv2D converts the image into pixels and takes an n-sized window
-# those features are then condensed into a feature map and the window slides
-# MaxPooling2D is used for spatial data
-# Dropout is a feature that stops certain neurals from training in order to
-# prevent an overfitting
 from keras.layers import Dense, Flatten, Conv2D, MaxPooling2D, Dropout
 
 from keras.models import load_model
