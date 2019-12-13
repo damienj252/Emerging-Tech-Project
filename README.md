@@ -29,6 +29,17 @@ The famous MNIST data set. The MNIST database of handwritten digits, available f
 of 60,000 examples, and a test set of 10,000 examples. It is a subset of a larger set available from NIST. The digits
 have been size-normalized and centered in a fixed-size image.
 
+# Reflection
+I found this project to be very interesting but I had many issues along the way and was too focused on them which left the
+functionality of the project to suffer. Next time I attempt to complete a project like this I will have a full understanding 
+of all the technologies involved and will be better organised and not let the smaller bugs take up so much of my time. 
+
+# References
+https://pillow.readthedocs.io/en/3.0.0/reference/Image.html
+https://docs.python.org/3.7/tutorial/
+https://matplotlib.org/tutorials/introductory/pyplot.html#sphx-glr-tutorials-introductory-pyplot-py
+https://keras.io/why-use-keras/
+
 # Software requirements of running the application
 Python
 Anaconda
