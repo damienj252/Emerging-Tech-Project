@@ -5,33 +5,31 @@
 <html>
  <head>
   <title>Drawing Calculator</title>
-  <link rel="stylesheet" type="text/css" href="/flaskfrontend/templates/app/frontend/static/calculatorbackground.css">
+  <link rel="stylesheet" type="text/css" ahref="/flaskfrontend/templates/app/frontend/static/calculatorbackground.css" />
   
-   <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.4.0/fabric.min.js'> </script>
+   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.4.0/fabric.min.js"> </script>
    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"> </script>
-    <style type='text/css'>
+    <script type=''></script>
+    </head>
+    <style type="text/css">
      #sheet {
             border:1px solid black;
         }
     </style>
     <script type='text/javascript'>
-                        window.onload=function(){
+                    window.onload=function(){
                         var canvas = new fabric.Canvas('sheet');
                         canvas.isDrawingMode = true;
                         canvas.freeDrawingBrush.width = 15;
-                        canvas.freeDrawingBrush.color = "#008000";}
-                        document.getElementById('clear').addEventListener('click', 
-                        function () {
-                            context.clearRect(0, 0, canvas.width, canvas.height)
-                            }, false);
-    </script>     
-</head>
+                        canvas.freeDrawingBrush.color = "#008000"};
+    </script> 
+
     <body>
         <form name="calculator">
           <table>
                 <tr>
-                    <th><input type="text" name="answer"/></th>
-                    <th><input type="button" id="clear" value=" c " onclick="calculator.answer.value = ' ' " /></th>
+                   <th><input type="text" name="answer"/></th>
+                    <th><input type="button" id="clearButton" value=" c " onclick="calculator.answer.value = ' ' " /></th>
                 </tr>
                 <tr align="down">
                     <th><canvas id="sheet" width="200" height="150"></canvas></th>
@@ -46,7 +44,6 @@
                     
                         <th align="right"><input type="button" id="=" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" />
                         <th><input type="button" id="addButton" value="Add " onclick=""/></th>
-
            </table>
         </form>
       </body>

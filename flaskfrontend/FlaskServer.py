@@ -17,34 +17,15 @@ app = fk(__name__)
 def calculator():
     return render_template('app/frontend/calculator.html')
 
-if __name__ == "__main__":
-    app.run() 
-    
+@app.route('/uploadImage', methods=['GET', 'POST'])
+def uploadImage():
+    # Get the image request
+    theImage = fk.request.values.get("theImage", " ")
+    # Print to console
+    print(theImage)
 
-@app.route('/MNIST', methods=['GET', 'POST'])
-def image():
-    
-    userImage = request.values['imageData']
-
-    print(userImage)
-
-    decodedImage = base64.b64decode(userImage[0:])
-    with open ("test.png", "wb") as d:
-        d.write(decodedImage)
-
-    model = load_model()
-
-    reshapedImage = reshape()
-        
-    prediction_array = model.predict(reshapedImage)
-    prediction = np.argmax(prediction_array)
-  
-    print(prediction)
-    return{"prediction": str(prediction)}
-
-    def reshape():
-        firstImage = Image.open('test.png').convert("L")
-        firstImage = ImageOps.fit(firstImage, 28, Image.ANTIALIAS)
-
-        img_sequence = np.array(firstImage).reshape(1, 28, 28, 1)
-        return img_sequence
+    decodedimage = base64.b64decode(theImage[22:])
+    with open("theImage.png", "wb") as f:
+        f.write(decodedimage)
+    # Respond numbers
+    return {"message": theImage}
