@@ -1,14 +1,26 @@
 body {
-  background-color: #888;
+  background-color: blue;
 }
 
 #sheet-container {
   width: 400px;
   height: 400px;
-  border: 1px solid black;
+  border: 5px solid black;
+}
+table {
+  margin: auto;
+  background-color: #222;
+  width: 295px;
+  max-width: 295px;
+  height: 325px;
+  text-align: center;
+  border-radius: 4px;
+  padding-right: 10px;
 }
 
-table {
+
+
+form {
   margin: auto;
   background-color: #222;
   width: 295px;
@@ -118,13 +130,4 @@ button:active {
   background-color: #F297A0;
   margin-bottom: 15px;
   box-shadow: 0 4px #CC7F86;
-}
-
-#clear:active {
-  float: left;
-  top: 4px;
-  display: block;
-  background-color: #F297A0;
-  margin-bottom: 15px;
-  box-shadow: none;
 }

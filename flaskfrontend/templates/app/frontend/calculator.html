@@ -5,14 +5,14 @@
 <html>
  <head>
   <title>Drawing Calculator</title>
-  <link rel="stylesheet" type="text/css" src="frontend/static/calculatorbackground.css">
-  <link rel="javascript"  src="frontend/static/background.js">
+  <link rel="stylesheet" type="text/css" href="/flaskfrontend/templates/app/frontend/static/calculatorbackground.css">
+  
    <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.4.0/fabric.min.js'></script>
   
    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <style type='text/css'>
      #sheet {
-            border:1px solid white;
+            border:1px solid black;
         }
     </style>
     <script type='text/javascript'>
@@ -31,7 +31,7 @@
                     <th><input type="button" id="clear" value=" c " onclick="calculator.answer.value = ' ' " /></th>
                 </tr>
                 <tr align="down">
-                    <th><canvas id="sheet" width="150" height="150"></canvas></th>
+                    <th><canvas id="sheet" width="200" height="150"></canvas></th>
             
                         <th align="right"><input type="button" id="+" value=" + " onclick="calculator.answer.value += '+'" />
                     
