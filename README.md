@@ -16,7 +16,7 @@ research organization for the purposes of conducting machine learning and deep n
 but the system is general enough to be applicable in a wide variety of other domains as well.
 
 Flask is a micro web framework written in Python and based on the Werkzeug toolkit and Jinja2 template engine. 
-It is BSD licensed. The latest stable version of Flask is 0.12.2 as of May 2017. 
+The latest stable version of Flask is 0.12.2 as of May 2017. 
 Applications that use the Flask framework include Pinterest, LinkedIn, and the community web page for Flask itself. 
 Flask is called a micro framework because it does not require particular tools or libraries. 
 It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries

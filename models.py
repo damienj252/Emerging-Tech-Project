@@ -1,8 +1,5 @@
-
 import numpy as np
-
 import matplotlib.pyplot as plt
-
 import keras as kr
 
 from keras.datasets import mnist
